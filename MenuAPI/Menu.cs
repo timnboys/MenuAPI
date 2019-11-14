@@ -720,7 +720,7 @@ namespace MenuAPI
                 }
 
                 IndexChangeEvent(this, oldItem, currItem, oldItem.Index, CurrentIndex);
-                PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                //PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
             }
         }
 
@@ -761,7 +761,7 @@ namespace MenuAPI
                     }
                 }
                 IndexChangeEvent(this, oldItem, currItem, oldItem.Index, CurrentIndex);
-                PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                //PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
             }
         }
 
@@ -789,7 +789,7 @@ namespace MenuAPI
                         }
                         listItem.ListIndex = newIndex;
                         ListItemIndexChangeEvent(this, listItem, oldIndex, newIndex, listItem.Index);
-                        PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                        //PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
                     }
                 }
                 else if (item.Enabled && item is MenuSliderItem slider)
@@ -798,11 +798,11 @@ namespace MenuAPI
                     {
                         SliderItemChangedEvent(this, slider, slider.Position, slider.Position - 1, slider.Index);
                         slider.Position--;
-                        PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                        //PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
                     }
                     else
                     {
-                        PlaySoundFrontend(-1, "ERROR", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                        //PlaySoundFrontend(-1, "ERROR", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
                     }
                 }
                 else if (item.Enabled && item is MenuDynamicListItem dynList)
@@ -811,7 +811,7 @@ namespace MenuAPI
                     string newSelectedItem = dynList.Callback(dynList, true);
                     dynList.CurrentItem = newSelectedItem;
                     DynamicListItemCurrentItemChanged(this, dynList, oldValue, newSelectedItem);
-                    PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                    //PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
                 }
                 // If it's a checkbox, just trigger the box instead.
                 else if (item.Enabled && item is MenuCheckboxItem checkbox)
@@ -850,7 +850,7 @@ namespace MenuAPI
                         }
                         listItem.ListIndex = newIndex;
                         ListItemIndexChangeEvent(this, listItem, oldIndex, newIndex, listItem.Index);
-                        PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                        //PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
                     }
                 }
                 else if (item.Enabled && item is MenuSliderItem slider)
@@ -859,11 +859,11 @@ namespace MenuAPI
                     {
                         SliderItemChangedEvent(this, slider, slider.Position, slider.Position + 1, slider.Index);
                         slider.Position++;
-                        PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                        //PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
                     }
                     else
                     {
-                        PlaySoundFrontend(-1, "ERROR", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                        //PlaySoundFrontend(-1, "ERROR", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
                     }
                 }
                 else if (item.Enabled && item is MenuDynamicListItem dynList)
@@ -872,7 +872,7 @@ namespace MenuAPI
                     string newSelectedItem = dynList.Callback(dynList, false);
                     dynList.CurrentItem = newSelectedItem;
                     DynamicListItemCurrentItemChanged(this, dynList, oldValue, newSelectedItem);
-                    PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
+                    //PlaySoundFrontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false);
                 }
                 // If it's a checkbox, just trigger the box instead.
                 else if (item.Enabled && item is MenuCheckboxItem checkbox)
